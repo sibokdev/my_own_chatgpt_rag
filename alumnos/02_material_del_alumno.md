@@ -3,7 +3,7 @@
 ## Antes del curso
 
 1. **Responde el cuestionario de bienvenida:**
-   https://docs.google.com/forms/d/1-Z_W0RfKiZoB4NFKvL0TJZuToNvXmoBh2qshJtWg_6U/edit
+   https://docs.google.com/forms/d/e/1FAIpQLSd0M6YZdb7LVPoCJ3O8U4z3wBnBEdF8zF7ebxvM8bLlCu3ALw/viewform?usp=sharing&ouid=107751030412273447799
 2. **Prepara tu entorno** siguiendo `alumnos/01_instalacion_y_configuracion.md` y corre `labs/00_setup_check.ipynb`.
 3. **Ten a la mano tu celular** o una pestaña del navegador para los quizzes en vivo en **menti.com** (hay ranking 🏆).
 
