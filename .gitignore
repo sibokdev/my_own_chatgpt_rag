@@ -1,0 +1,8 @@
+.env
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+
+# Material exclusivo del instructor (respuestas, soluciones, guion y presentación).
+# No se publica en el repositorio de alumnos; consérvalo aparte.
+instructor/

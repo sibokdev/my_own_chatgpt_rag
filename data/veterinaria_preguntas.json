@@ -1,0 +1,66 @@
+[
+  {
+    "id": "vet-01",
+    "tipo": "directa",
+    "pregunta": "¿Con cuánta anticipación debo cancelar una cita?",
+    "respuesta_esperada": "Al menos 12 horas de anticipación.",
+    "evidencia": ["al menos 12 horas de anticipación"],
+    "seccion_esperada": "3. Citas"
+  },
+  {
+    "id": "vet-02",
+    "tipo": "sinonimo",
+    "pregunta": "¿Cuántos días debe llevar el cono mi perro después de operarlo?",
+    "respuesta_esperada": "10 días, día y noche (collar isabelino).",
+    "evidencia": ["collar isabelino"],
+    "seccion_esperada": "6.2 Cuidados después de la cirugía (cuidados postoperatorios)"
+  },
+  {
+    "id": "vet-03",
+    "tipo": "sinonimo",
+    "pregunta": "Mi perro se comió una barra de chocolate, ¿qué hago?",
+    "respuesta_esperada": "Acudir a urgencias de inmediato; la ingesta de chocolate es una señal de alerta. Urgencias atiende 24 horas.",
+    "evidencia": ["Haber ingerido chocolate"],
+    "seccion_esperada": "2.1 Señales de alerta: cuándo acudir de inmediato"
+  },
+  {
+    "id": "vet-04",
+    "tipo": "conflicto",
+    "pregunta": "¿Cuánto cuesta una consulta general?",
+    "respuesta_esperada": "$450 MXN (tarifa 2026). Los $380 corresponden a la tarifa 2025, que ya no está vigente.",
+    "evidencia": ["| Consulta general                            | $450"],
+    "seccion_esperada": "8. Precios de servicios (2026)"
+  },
+  {
+    "id": "vet-05",
+    "tipo": "directa",
+    "pregunta": "¿Cuántas horas de ayuno necesita mi gata antes de esterilizarla?",
+    "respuesta_esperada": "8 horas sin alimento sólido; el agua se retira 2 horas antes.",
+    "evidencia": ["Ayuno de alimento sólido de 8 horas"],
+    "seccion_esperada": "6.1 Antes de la cirugía"
+  },
+  {
+    "id": "vet-06",
+    "tipo": "directa",
+    "pregunta": "¿A qué edad se aplica la vacuna de la rabia a un gato?",
+    "respuesta_esperada": "Alrededor de las 16 semanas, con refuerzo cada año.",
+    "evidencia": ["Refuerzo de triple felina y rabia"],
+    "seccion_esperada": "4.2 Gatos"
+  },
+  {
+    "id": "vet-07",
+    "tipo": "fuera",
+    "pregunta": "¿Atienden a domicilio?",
+    "respuesta_esperada": "El documento no tiene esa información.",
+    "evidencia": [],
+    "seccion_esperada": null
+  },
+  {
+    "id": "vet-08",
+    "tipo": "fuera",
+    "pregunta": "¿Cuánto cuesta esterilizar a un perro de 35 kg?",
+    "respuesta_esperada": "El documento solo da precios hasta 20 kg; no tiene esa información.",
+    "evidencia": [],
+    "seccion_esperada": null
+  }
+]

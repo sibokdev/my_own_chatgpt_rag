@@ -1,0 +1,16 @@
+[project]
+name = "rag-course"
+version = "0.1.0"
+description = "Curso práctico de RAG desde cero"
+requires-python = ">=3.11"
+dependencies = [
+    "ipykernel",
+    "jupyter",
+    "numpy",
+    "pandas",
+    "python-dotenv",
+    "scikit-learn",
+    "tiktoken",
+    "openai",
+    "matplotlib",
+]

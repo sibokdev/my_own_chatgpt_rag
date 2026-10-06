@@ -1,0 +1,66 @@
+[
+  {
+    "id": "caf-01",
+    "tipo": "directa",
+    "pregunta": "¿Cuántas estrellas necesito para canjear una bebida gratis?",
+    "respuesta_esperada": "120 estrellas.",
+    "evidencia": ["120 estrellas"],
+    "seccion_esperada": "4. Programa de lealtad \"Órbita\""
+  },
+  {
+    "id": "caf-02",
+    "tipo": "sinonimo",
+    "pregunta": "¿Cada cuánto se le quita el sarro a la cafetera?",
+    "respuesta_esperada": "La descalcificación se hace cada 3 meses (o antes si la dureza del agua supera 120 ppm) y solo la hace el técnico certificado.",
+    "evidencia": ["se realiza cada 3 meses"],
+    "seccion_esperada": "8.2 Descalcificación"
+  },
+  {
+    "id": "caf-03",
+    "tipo": "directa",
+    "pregunta": "¿Cuánto cuesta el envío a domicilio?",
+    "respuesta_esperada": "$35 para pedidos menores a $250; gratis para pedidos de $250 o más.",
+    "evidencia": ["El costo de envío es de $35"],
+    "seccion_esperada": "6. Pedidos para llevar y entregas a domicilio"
+  },
+  {
+    "id": "caf-04",
+    "tipo": "conflicto",
+    "pregunta": "¿A qué hora abre la sucursal Centro los domingos?",
+    "respuesta_esperada": "Desde marzo de 2026 abre de 09:00 a 15:00 (la tabla de horarios aún muestra 08:00 – 14:00, que ya no está vigente).",
+    "evidencia": ["ahora abre de 09:00 a 15:00"],
+    "seccion_esperada": "12. Avisos y cambios recientes"
+  },
+  {
+    "id": "caf-05",
+    "tipo": "conflicto",
+    "pregunta": "¿Cuántos días tengo para devolver un termo que compré?",
+    "respuesta_esperada": "15 días naturales con ticket y sin abrir (la política de 7 días era la anterior, vigente hasta 2024). Si tiene defecto de fabricación, el termo tiene garantía de 6 meses.",
+    "evidencia": ["dentro de los 15 días naturales"],
+    "seccion_esperada": "5. Devoluciones, reembolsos y quejas"
+  },
+  {
+    "id": "caf-06",
+    "tipo": "sinonimo",
+    "pregunta": "Soy alérgico a la almendra, ¿qué me recomiendan al pedir?",
+    "respuesta_esperada": "Pedir que la bebida se prepare en una jarra nueva sin uso previo en el turno; no se garantiza la ausencia total de trazas.",
+    "evidencia": ["jarra nueva"],
+    "seccion_esperada": "7. Alérgenos e información nutricional"
+  },
+  {
+    "id": "caf-07",
+    "tipo": "fuera",
+    "pregunta": "¿Venden comida vegana sin gluten en la sucursal Andares?",
+    "respuesta_esperada": "El documento no tiene esa información.",
+    "evidencia": [],
+    "seccion_esperada": null
+  },
+  {
+    "id": "caf-08",
+    "tipo": "fuera",
+    "pregunta": "¿Cuál es el salario de un barista de Nébula?",
+    "respuesta_esperada": "El documento no tiene esa información.",
+    "evidencia": [],
+    "seccion_esperada": null
+  }
+]
