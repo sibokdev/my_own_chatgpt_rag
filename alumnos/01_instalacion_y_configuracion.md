@@ -46,12 +46,19 @@ git config --global user.email "tu@correo.com"
 
 ## 2. Clonar el repositorio del curso
 
-Elige una carpeta de trabajo (por ejemplo `Documentos`) y clona:
+Elige una carpeta de trabajo con una **ruta corta** y clona:
 ```bash
+# Windows: usa una carpeta fuera de OneDrive, por ejemplo C:\cursos
+mkdir C:\cursos; cd C:\cursos
+# macOS/Linux:
 cd ~/Documents
 git clone https://github.com/sibokdev/my_own_chatgpt_rag.git
 cd my_own_chatgpt_rag
 ```
+
+> **Windows:** evita clonar dentro de OneDrive (Escritorio/Documentos sincronizados) o en rutas muy largas.
+> OneDrive bloquea o sincroniza archivos del entorno `.venv` y Windows limita las rutas a 260 caracteres,
+> lo que puede dejar paquetes instalados a medias.
 
 > Repositorio del curso: https://github.com/sibokdev/my_own_chatgpt_rag
 
@@ -88,7 +95,14 @@ Dentro de la carpeta del repositorio (donde está `pyproject.toml`):
 uv sync
 ```
 
-Esto crea un entorno virtual en `.venv/` con Jupyter, numpy, pandas, scikit-learn, tiktoken, openai, matplotlib y python-dotenv.
+Esto descarga Python 3.12 (fijado en `.python-version`) si no lo tienes, y crea un entorno virtual en `.venv/` con
+Jupyter, numpy, pandas, scikit-learn, tiktoken, openai, matplotlib y python-dotenv.
+Es **la única instalación necesaria**: cubre todos los labs, challenges y el demo. No uses `pip install` por separado.
+
+Verifica que todo quedó instalado:
+```bash
+uv run python -c "import numpy, pandas, sklearn, tiktoken, openai, dotenv, matplotlib; print('OK')"
+```
 
 ## 5. Configurar el proveedor de LLM (`.env`)
 
@@ -141,6 +155,10 @@ OPENAI_API_KEY=sk-...tu_api_key...
    (aparece como `.venv (Python 3.x)` con la ruta de la carpeta del repo).
 6. Ejecuta las celdas con `Shift+Enter` o con **Run All**. Si todas terminan en ✅, estás listo.
 
+> **Importante:** elige el kernel `.venv` en **cada** notebook que abras (VS Code suele recordarlo, pero verifícalo arriba a la derecha).
+> Todos los notebooks empiezan con una celda *Verificación del entorno*: si dice que faltan paquetes,
+> el problema casi siempre es el kernel elegido, no la instalación.
+
 ### Alternativa: Jupyter en el navegador
 
 ```bash
@@ -184,7 +202,8 @@ solutions/     ← aparece cuando el instructor publica las soluciones (al final
 | `git` o `uv` "no se reconoce como comando" | Cierra y vuelve a abrir la terminal (y VS Code). Si persiste, reinicia sesión. |
 | PowerShell bloquea el script de instalación | Usa exactamente el comando con `-ExecutionPolicy ByPass` del paso 3. |
 | VS Code no muestra `.venv` en Select Kernel | Ejecuta `uv sync`, luego `Ctrl+Shift+P` → **Developer: Reload Window**. O usa la alternativa de registrar el kernel. |
-| `ModuleNotFoundError` en el notebook | El kernel seleccionado no es el `.venv` del proyecto. Cámbialo en **Select Kernel**. |
+| `ModuleNotFoundError` / "Faltan paquetes" en el notebook | El kernel seleccionado no es el `.venv` del proyecto (la celda de verificación muestra qué Python está usando). Cámbialo en **Select Kernel → Python Environments → .venv** y reinicia el kernel. Si el kernel sí es `.venv`, ejecuta `uv sync` de nuevo. |
+| `uv sync` falla con rutas o archivos bloqueados (Windows) | Mueve el repositorio fuera de OneDrive a una ruta corta (por ejemplo `C:\cursos`), borra `.venv` y vuelve a ejecutar `uv sync`. |
 | `Falta OPENAI_API_KEY` | Revisa que el archivo se llame exactamente `.env` (no `.env.txt`) y esté en la raíz del repo. Reinicia el kernel. |
 | Error de conexión con Ollama | Verifica que Ollama esté abierto (`ollama list` en la terminal) y que descargaste ambos modelos. |
 | Red corporativa / proxy bloquea descargas | Configura `HTTP_PROXY` y `HTTPS_PROXY` o usa otra red para instalar. |
