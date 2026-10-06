@@ -129,6 +129,12 @@ OPENAI_API_KEY=sk-...tu_api_key...
 
 1. Instala [Visual Studio Code](https://code.visualstudio.com/).
 2. Instala las extensiones **Python** y **Jupyter** (ambas de Microsoft) desde la pestaña de Extensiones (`Ctrl+Shift+X`).
+   O desde la terminal:
+   ```bash
+   code --install-extension ms-python.python
+   code --install-extension ms-toolsai.jupyter
+   ```
+   Después recarga VS Code: `Ctrl+Shift+P` → **Developer: Reload Window**.
 3. Abre la carpeta del repositorio: **File → Open Folder…** (o desde la terminal: `code .`).
 4. Abre `labs/00_setup_check.ipynb`.
 5. Arriba a la derecha haz clic en **Select Kernel → Python Environments…** y elige el entorno **`.venv`** del proyecto
@@ -144,6 +150,14 @@ o
 ```bash
 uv run jupyter notebook
 ```
+
+### Alternativa: ejecutar un notebook solo desde la terminal
+
+Ejecuta todas las celdas y guarda los resultados en el mismo archivo, sin abrir editor ni navegador:
+```bash
+uv run jupyter nbconvert --to notebook --execute --inplace labs/00_setup_check.ipynb
+```
+Sirve para el setup check o para probar un notebook completo. Para resolver los labs (celdas `# TODO`) necesitas un editor interactivo: VS Code o Jupyter en el navegador.
 
 ### Alternativa: registrar el kernel con nombre propio
 
