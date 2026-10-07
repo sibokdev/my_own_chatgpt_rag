@@ -156,8 +156,8 @@ OPENAI_API_KEY=sk-...tu_api_key...
 6. Ejecuta las celdas con `Shift+Enter` o con **Run All**. Si todas terminan en ✅, estás listo.
 
 > **Importante:** elige el kernel `.venv` en **cada** notebook que abras (VS Code suele recordarlo, pero verifícalo arriba a la derecha).
-> Todos los notebooks empiezan con una celda *Verificación del entorno*: si dice que faltan paquetes,
-> el problema casi siempre es el kernel elegido, no la instalación.
+> Todos los notebooks empiezan con una celda *Instalación de dependencias*: **ejecútala siempre primero**.
+> Si al kernel le falta algún paquete, lo instala automáticamente (requiere internet); si ya está todo, solo muestra ✅.
 
 ### Alternativa: Jupyter en el navegador
 
@@ -202,7 +202,8 @@ solutions/     ← aparece cuando el instructor publica las soluciones (al final
 | `git` o `uv` "no se reconoce como comando" | Cierra y vuelve a abrir la terminal (y VS Code). Si persiste, reinicia sesión. |
 | PowerShell bloquea el script de instalación | Usa exactamente el comando con `-ExecutionPolicy ByPass` del paso 3. |
 | VS Code no muestra `.venv` en Select Kernel | Ejecuta `uv sync`, luego `Ctrl+Shift+P` → **Developer: Reload Window**. O usa la alternativa de registrar el kernel. |
-| `ModuleNotFoundError` / "Faltan paquetes" en el notebook | El kernel seleccionado no es el `.venv` del proyecto (la celda de verificación muestra qué Python está usando). Cámbialo en **Select Kernel → Python Environments → .venv** y reinicia el kernel. Si el kernel sí es `.venv`, ejecuta `uv sync` de nuevo. |
+| `ModuleNotFoundError` en el notebook | No ejecutaste la primera celda (*Instalación de dependencias*). Ejecútala y vuelve a correr la celda que falló. |
+| "No se pudieron instalar" en la primera celda | Revisa tu conexión a internet. La celda muestra qué Python usa el kernel: cámbialo en **Select Kernel → Python Environments → .venv**, reinicia el kernel y, si persiste, ejecuta `uv sync` en la terminal. |
 | `uv sync` falla con rutas o archivos bloqueados (Windows) | Mueve el repositorio fuera de OneDrive a una ruta corta (por ejemplo `C:\cursos`), borra `.venv` y vuelve a ejecutar `uv sync`. |
 | `Falta OPENAI_API_KEY` | Revisa que el archivo se llame exactamente `.env` (no `.env.txt`) y esté en la raíz del repo. Reinicia el kernel. |
 | Error de conexión con Ollama | Verifica que Ollama esté abierto (`ollama list` en la terminal) y que descargaste ambos modelos. |
